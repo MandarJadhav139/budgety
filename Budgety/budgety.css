@@ -1,0 +1,274 @@
+*{
+	
+	box-sizing: border-box;
+}
+body{
+	margin:0px;
+	padding:0px;
+}
+.container{
+	display:grid;
+
+	grid-template-columns: 100%;
+	grid-auto-rows: minmax(74px,auto);
+	grid-template-areas: 
+						'top'
+						'top'
+						'top'
+						'top'
+						'middle'
+						'bottom'
+						'bottom'
+						'bottom'
+						'bottom'
+						'bottom';
+}
+.top{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(back.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	display:flex;
+	grid-area: top;
+	flex-flow: column;
+	align-items: center;
+}
+.top > p{
+	font-family: "Open Sans";
+	font-size: 18px;
+	font-weight: 300;
+	margin-top: 40px;
+}
+.budget{
+	font-family: "Open Sans";
+	font-size: 46px;
+	font-weight: 300;
+	letter-spacing: 2px;
+	margin-top: 0px;
+	margin-bottom: 30px;
+}
+.incomes{
+	display:flex;
+	flex-flow: row;
+	background-color: #28B9B5;
+	padding:12px;
+	margin-bottom: 10px;
+
+	width:350px;
+	border-style: none;
+	
+
+}
+.expenses{
+	display:flex;
+	flex-flow: row;
+	background-color: #FF5049;
+	padding:12px;
+	border-style: none;
+	width:350px;
+
+}
+.inc1,.exp1{
+	color: #444444;
+	font-size: 14px;
+	font-weight: 400;
+	font-family: Open Sans;
+}
+.totalincome,.totalexpenses,.exppercent,.top p{
+	color:white;
+}
+.totalincome{
+	padding-left: 170px;
+}
+.totalexpenses{
+	padding-left: 160px;
+}
+.exppercent{
+	background-color: #FF736D;
+	padding: 1px 5px;
+	border-style: none;
+	margin-left: 15px;
+	border-radius: 3px;
+}
+.middle{
+	display: flex;
+	justify-content: center;
+	flex-flow: row;
+	background-color: #F7F7F7;
+	grid-area: middle;
+}
+.select{
+	margin:20px 7px;
+	border-style: none;
+	width:50px;
+	font-size: 15px;
+}
+.select:focus{
+	outline: none;
+	border:1px solid green;
+}
+.input{
+	margin:20px 7px;
+	border-style: none;
+	width:400px;
+	font-size: 15px;
+	padding-left: 20px;
+	border-radius: 4px;
+}
+.input:focus{
+	outline: none;
+	border:1px solid green;
+}
+.value{
+	margin:20px 7px;
+	border-style: none;
+	width:100px;
+	font-size: 15px;
+	padding-left: 20px;
+	border-radius: 4px;
+}
+.value:focus{
+	outline: none;
+	border:1px solid green;
+}
+.addbutton{
+	color:green;
+	margin:25px 7px;
+	font-size: 30px;
+	font-weight: 400;
+	padding-left: 6px;
+	cursor: pointer;
+	border:none;
+	background-color: #F7F7F7;
+}
+.addbutton:focus{
+	outline:none;
+}
+.bottom{
+	display: flex;
+	flex-flow: row;
+	grid-area: bottom;
+	background-color: white;
+}
+.inc2{
+	width:50%;
+	margin-left: 300px;
+	margin-top: 50px;
+
+}
+.exp2{
+	width:50%;
+	margin-right: 200px;
+	margin-top: 50px;
+	margin-left:100px; 
+}
+.inc2 > p{
+	color:#28B9B5;
+	font-family: Open Sans;
+	font-size: 20px;
+	font-weight: 400;
+
+	
+}
+.exp2 > p{
+	color:#FF5049;
+	font-family: Open Sans;
+	font-size: 20px;
+	font-weight: 400;
+	
+}
+.income{
+	
+	display:flex;
+	flex-flow: row;
+	border-top:1px solid #F3F3F3;
+	border-bottom: 1px solid #F3F3F3;
+
+}
+.expense{
+	
+	display:flex;
+	flex-flow: row;
+	border-top:1px solid #F3F3F3;
+	border-bottom: 1px solid #F3F3F3;
+
+}
+.incomelist div:nth-child(even){
+	background-color: #F7F7F7;
+}
+.expenselist div:nth-child(even){
+	background-color: #F7F7F7;
+}
+.description{
+	margin-left: 10px;
+	color:#555555;
+	font-size: 16px;
+	font-family: Open Sans;
+	font-weight: 400;
+}
+.val{
+	color:#28B9B5;
+	font-family: Open Sans;
+	font-size: 16px;
+	font-weight: 400;
+	margin-left: 350px;
+	margin-right: 0px;
+}
+.incomelist button{
+	border:none;
+	display:none;
+	background-color: white;
+	color:#28B9B5;
+	font-family: Open Sans;
+	font-size: 16px;
+	font-weight: 400;
+	margin-left: 0px;
+}
+.expenselist button{
+	border:none;
+	display:none;
+	background-color: white;
+	color:#28B9B5;
+	font-family: Open Sans;
+	font-size: 22px;
+	font-weight: 400;
+}
+.incomelist div:nth-child(even) button{
+	background-color: #F7F7F7;
+}
+.expenselist div:nth-child(even) button{
+	background-color: #F7F7F7;
+}
+.income:hover button{
+	display:block;
+
+}
+.income:hover .val{
+	transform: translateX(-20px);
+}
+.expense:hover button{
+	display:block;
+
+}
+button:focus{
+	outline:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

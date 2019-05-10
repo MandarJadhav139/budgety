@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="budgety.css">
+	
+	<title>BUDGETY</title>
+</head>
+<body>
+	<div class="container">
+		<div class="top">
+			<p>Available Budget In <span class = "date">November 2018</span></p>
+			<p class="budget">0.00</p>
+			<div class="incomes">
+				<div class="inc1">INCOME</div>
+				<div class="totalincome">+0.00</div>
+				<div class="incpercent">&nbsp &nbsp &nbsp</div>
+			</div>
+			<div class="expenses">
+				<div class="exp1">EXPENSES</div>
+				<div class="totalexpenses">-0.00</div>
+				<div class="exppercent">---</div>
+			</div>
+		</div>
+		<div class="middle">
+			<select class="select">
+				<option value="inc" selected>+</option>
+				<option value="exp">-</option>
+			</select>
+			<input type="text" placeholder="Add description" class="input">
+			<input type="number" placeholder="Value" class="value">
+			<button class="addbutton"><i class="ion-ios-checkmark-outline"></i></button>
+
+		</div>
+		<div class="bottom">
+			<div class="inc2">
+				<p>INCOME</p>
+				<div class="incomelist">
+					<!-- <div class="income" id="inc-1">
+						<p class="description">xyz</p>
+						<p class="val">+3,000.00</p>
+						<button><i class="ion-ios-close-outline"></i></button>
+					</div>
+					<div class="income" id="inc-2">
+						<p class="description">xyz</p>
+						<p class="val">+3,000.00</p>
+						<button><i class="ion-ios-close-outline"></i></button>
+					</div> -->
+				</div>
+			</div>
+			<div class="exp2">
+				<p>EXPENSES</p>
+				<div class="expenselist">
+					<!--<div class="expense" id='exp-1'>
+						<p class="description">xyz</p>
+						<p class="val">+3,000.00</p>
+						<button><i class="ion-ios-close-outline"></i></button>
+					</div>
+					<div class="expense" id='exp-2'>
+						<p class="description">xyz</p>
+						<p class="val">+3,000.00</p>
+						<button><i class="ion-ios-close-outline"></i></button>
+					</div>-->
+				</div> 
+			</div>
+		</div>
+	</div>
+	<script src="budgety.js"></script>
+</body>
+</html>
